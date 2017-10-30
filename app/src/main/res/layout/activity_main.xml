@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.techrex.n_facts.MainActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/numberbg1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0.5"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/appBar"
+        android:scaleType="fitXY"
+        android:layout_margin="16dp"
+        android:background="@null"/>
+    <TextView
+        android:layout_width="0dp"
+        android:background="#ffffff"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Fact of the day"
+        android:textAlignment="center"
+        android:layout_margin="16dp"
+        android:textSize="28sp"
+        android:textColor="#f70404"
+        android:id="@+id/factOfTheDay"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factOfTheDay"
+        android:text="Loading.."
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:background="#be1414"
+        android:id="@+id/todayTextView"
+        android:padding="8dp"
+        />
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todayTextView"
+        android:text="Random Facts"
+        android:textColor="#fff"
+            android:textSize="40sp"
+        android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:background="#be1414"
+            android:id="@+id/randomButton"
+            />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomButton"
+        android:text="Quest Facts"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:layout_marginTop="30dp"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:background="#be1414"
+        android:id="@+id/questButton"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>

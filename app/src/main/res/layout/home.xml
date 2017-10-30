@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
+    android:fillViewport="true"
+    tools:context="com.techrex.n_facts.MainActivity"
+    >
+
+<android.support.constraint.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.AppBarLayout android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppTheme"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/appBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="4dp"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:elevation="4dp"
+            android:layout_height="56dp">
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center"
+                android:textStyle="normal|bold"
+                android:textSize="35sp"
+                android:textAllCaps="false"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="N-Facts"
+                android:textColor="#fff"/>
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+    <View
+        android:layout_width="0dp"
+        android:background="#f90307"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="0dp"
+        android:id="@+id/RedLine"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#00f2ff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RedLine"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/cardView1"
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_margin="4dp">
+        <TextView
+            android:id="@+id/fodTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Fact of the day"
+            android:textAlignment="center"
+            android:textColor="#fd051a"
+            android:textSize="25dp"
+            android:typeface="normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fodTV"
+                android:id="@+id/line1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#fd051a"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+        <TextView
+            android:id="@+id/factOfTheDayTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Loading..."
+            android:textAlignment="center"
+            android:textColor="#152866"
+            android:textSize="20dp"
+            android:typeface="normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView1"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#d41900ff"
+        android:id="@+id/randomCardView"
+        app:cardCornerRadius="20dp"
+        android:elevation="@dimen/cardview_default_elevation"
+       >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random Facts"
+            android:clickable="true"
+            android:onClick="viewCatagoryRandom"
+            android:textColor="#fff"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:textSize="30dp"
+            android:id="@+id/randomTV"
+            />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomCardView"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#d0ff0011"
+        android:id="@+id/questCardView"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:elevation="@dimen/cardview_default_elevation">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quest Facts"
+                android:textColor="#fff"
+                android:layout_margin="16dp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:clickable="true"
+                android:onClick="viewcategoryQuest"
+                android:textSize="30dp"
+                android:id="@+id/questTV"
+                />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questCardView"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#d0ff0011"
+        android:id="@+id/aboutCardView"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:elevation="@dimen/cardview_default_elevation">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textColor="#fff"
+                android:layout_margin="16dp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:clickable="true"
+                android:onClick="viewcategoryQuest"
+                android:textSize="30dp"
+                android:id="@+id/aboutTV"
+                />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
+    </ScrollView>
